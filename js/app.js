@@ -306,45 +306,57 @@ function searchFetch(url) {
           <div class="fila_1">
             <div class="caja">
             <img src=${listaSearch[0]}>
+            <span class="lineaTrending" style="display:none">#${titulosBusqueda[0]}</span>
             </div>
             <div class="caja">
             <img src=${listaSearch[1]}>
+            <span class="lineaTrending" style="display:none">#${titulosBusqueda[1]}</span>
             </div>
             <div class="caja">
             <img src=${listaSearch[2]}>
+            <span class="lineaTrending" style="display:none">#${titulosBusqueda[2]}</span>
             </div>
             <div class="caja">
             <img src=${listaSearch[3]}>
+            <span class="lineaTrending" style="display:none">#${titulosBusqueda[3]}</span>
             </div>        
           </div>
   
           <div class="fila_2">
             <div class="caja">
             <img src=${listaSearch[4]}>
+            <span class="lineaTrending" style="display:none">#${titulosBusqueda[4]}</span>
             </div>
             <div class="caja">
             <img src=${listaSearch[5]}>
+            <span class="lineaTrending" style="display:none">#${titulosBusqueda[5]}</span>
             </div>
             <div class="caja">
             <img src=${listaSearch[6]}>
+            <span class="lineaTrending" style="display:none">#${titulosBusqueda[6]}</span>
             </div>
             <div class="caja">
             <img src=${listaSearch[7]}>
+            <span class="lineaTrending" style="display:none">#${titulosBusqueda[7]}</span>
             </div> 
           </div>
   
           <div class="fila_3">
             <div class="caja">
             <img src=${listaSearch[8]}>
+            <span class="lineaTrending" style="display:none">#${titulosBusqueda[8]}</span>
             </div>
             <div class="caja">
             <img src=${listaSearch[9]}>
+            <span class="lineaTrending" style="display:none">#${titulosBusqueda[9]}</span>
             </div>
             <div class="caja">
             <img src=${listaSearch[10]}>
+            <span class="lineaTrending" style="display:none">#${titulosBusqueda[10]}</span>
             </div>
             <div class="caja">
             <img src=${listaSearch[11]}>
+            <span class="lineaTrending" style="display:none">#${titulosBusqueda[11]}</span>
             </div>       
           </div> `;
       }
