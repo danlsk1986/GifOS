@@ -1,0 +1,23 @@
+commit 7ab2ccb6e495183251920772c54928fdb7061c8f
+Author: danlsk1986 <danlsk1986@gmail.com>
+Date:   Wed Mar 18 12:36:38 2020 -0300
+
+    Oculte el opc-busqueda al enviar
+
+commit e3046c011dde336e7c32002421c264f11ac1fdf2
+Author: danlsk1986 <danlsk1986@gmail.com>
+Date:   Wed Mar 18 12:24:47 2020 -0300
+
+    Aplique ocultar la opc-busqueda el enviar
+
+commit 0980c9e78ffeba838130184d532419c0d322ddda
+Author: danlsk1986 <danlsk1986@gmail.com>
+Date:   Wed Mar 18 12:19:48 2020 -0300
+
+    Agregue el opc-busqueda
+
+commit 9433632da8e4631963b90a79d3a49e7f288eeb8d
+Author: danlsk1986 <danlsk1986@gmail.com>
+Date:   Wed Mar 18 11:53:33 2020 -0300
+
+    Iniciamos
