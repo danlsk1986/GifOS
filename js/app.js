@@ -359,6 +359,8 @@ function searchFetch(url) {
             <span class="lineaTrending" style="display:none">#${titulosBusqueda[11]}</span>
             </div>       
           </div> `;
+
+          busquedaLinea();
       }
 
 
@@ -641,5 +643,26 @@ function tendenciasLinea(){
 /*Prueba*/
 /*-----------------------------------*/
 
-
+function busquedaLinea(){
+  let cajaChica = document.getElementsByClassName('caja');
+  let nvaCajaChica = Array.from(cajaChica);
+  
+  for(k in nvaCajaChica){
+    nvaCajaChica[k].addEventListener('mouseover', function(e){
+      
+        let titulo = e.path[1].children[1];         
+           titulo.style.display = "block";
+        
+    }),
+     
+        
+    nvaCajaChica[k].addEventListener('mouseout', function(event){
+      
+      let titulo = event.path[1].children[1];     
+      titulo.style.display = "none";
+    })
+   
+  }  
+  
+}
 
