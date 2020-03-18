@@ -91,9 +91,9 @@ var sendToPage = function () {
        coincidencias.push(sugerencias[x]);
        coincidencias.sort();
 
-        opcBusqueda.innerHTML =  `<input type="button" value=${coincidencias[0]} >
-                                  <input type="button" value=${coincidencias[1]} >
-                                  <input type="button" value=${coincidencias[2]} >                           
+        opcBusqueda.innerHTML =  `<input type="button" value=${coincidencias[0]}>
+                                  <input type="button" value=${coincidencias[1]}>
+                                  <input type="button" value=${coincidencias[2]}>                           
       ` 
     }  
   }
