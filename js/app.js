@@ -31,6 +31,7 @@ var misSugerencias = ['simpsons', 'star wars', 'cartoon network', 'divertidos'];
 //ARRAYS
 
 var listaSearch = [];
+var titulosBusqueda = [];
 var listaTrending = [];
 var titulosTrending = [];
 var misBusquedas = [];
@@ -286,9 +287,10 @@ function searchFetch(url) {
 
       for (j in json.data) {
         let resultado = json.data[j].images.downsized.url;
-        
-        
-
+        let titulos = json.data[j].title;
+       
+        titulosBusqueda.push(titulos);
+        console.log(titulosBusqueda);
         listaSearch.push(resultado);
 
       }
@@ -302,24 +304,48 @@ function searchFetch(url) {
           <input type="text" placeholder=" Resultado de la Busqueda">
   
           <div class="fila_1">
-            <div class="caja"><img src=${listaSearch[0]}></div>
-            <div class="caja"><img src=${listaSearch[1]}></div>
-            <div class="caja"><img src=${listaSearch[2]}></div>
-            <div class="caja"><img src=${listaSearch[3]}></div>        
+            <div class="caja">
+            <img src=${listaSearch[0]}>
+            </div>
+            <div class="caja">
+            <img src=${listaSearch[1]}>
+            </div>
+            <div class="caja">
+            <img src=${listaSearch[2]}>
+            </div>
+            <div class="caja">
+            <img src=${listaSearch[3]}>
+            </div>        
           </div>
   
           <div class="fila_2">
-            <div class="caja"><img src=${listaSearch[4]}></div>
-            <div class="caja"><img src=${listaSearch[5]}></div>
-            <div class="caja"><img src=${listaSearch[6]}></div>
-            <div class="caja"><img src=${listaSearch[7]}></div> 
+            <div class="caja">
+            <img src=${listaSearch[4]}>
+            </div>
+            <div class="caja">
+            <img src=${listaSearch[5]}>
+            </div>
+            <div class="caja">
+            <img src=${listaSearch[6]}>
+            </div>
+            <div class="caja">
+            <img src=${listaSearch[7]}>
+            </div> 
           </div>
   
           <div class="fila_3">
-            <div class="caja"><img src=${listaSearch[8]}></div>
-            <div class="caja"><img src=${listaSearch[9]}></div>
-            <div class="caja"><img src=${listaSearch[10]}></div>
-            <div class="caja"><img src=${listaSearch[11]}></div>       
+            <div class="caja">
+            <img src=${listaSearch[8]}>
+            </div>
+            <div class="caja">
+            <img src=${listaSearch[9]}>
+            </div>
+            <div class="caja">
+            <img src=${listaSearch[10]}>
+            </div>
+            <div class="caja">
+            <img src=${listaSearch[11]}>
+            </div>       
           </div> `;
       }
 
