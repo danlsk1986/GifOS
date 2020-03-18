@@ -1,0 +1,821 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+:root {
+    --blanco--: #FFFFFF;
+    --negro--: #000000;
+    --snuff--: #F7C9F3;
+    --white-smoke--: #F0F0F0;
+    --whisper--: #E6E6E6;
+    --lavender-blush--: #FFF4FD;
+    --lilac--: #CCA6C9;
+    --blackCurrant--: #110038;
+    --frenchLilac--: #E6BBE2;
+    --pinkSwan--: #B4B4B4;
+}
+
+
+body {
+    position: relative;
+    margin: auto 91px;
+    background-color: var(--blanco--);
+}
+
+
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 130px;
+}
+
+
+.logo {
+    position: absolute;
+    width: 102px;
+    top: 50px;
+    height: 64px;
+    background-image: url(../img/gifOF_logo.png);
+    background-repeat: no-repeat;
+}
+
+
+.botones {
+    position: absolute;
+    top: 50px;
+    display: flex;
+    flex-direction: row;
+    right: 35px;
+}
+
+
+.btn-crea a,
+.btn-elegi a,
+.my_guifos a {
+    color: var(--negro--);
+}
+
+.my_guifos a span{
+    text-decoration: underline;
+}
+
+.botones .btn-crea {
+    width: 144px;
+    height: 36px;
+    margin: 0 5px;
+    padding: 8px 0;
+    border: 1px solid black;
+    outline: none;
+    text-align: center;
+    font-size: 14px;
+    background-color: var(--snuff--);
+    cursor: pointer;
+}
+
+.botones .btn-elegi {
+    width: 127px;
+    height: 36px;
+    font-size: 14px;    
+    padding: 8px 0;
+    text-align: center;
+    border: 1px solid black;
+    background-color: var(--snuff--);
+    cursor: pointer
+}
+
+
+.dropdown {
+    display: flex;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid black;
+    border-left: none;
+    background-color: var(--snuff--);
+}
+
+
+.btn-crea a:hover {
+    padding: 5px 28px;
+    outline: 1px dotted var(--negro--);
+}
+
+.btn-elegi a:hover {
+    padding: 5px 23px;
+    outline: 1px dotted var(--negro--);
+}
+
+
+.dropdown:hover {
+    outline: 1px dotted var(--negro--);
+    outline-offset: -5px;
+}
+
+.my_guifos {
+    padding: 6px 10px;
+    margin-left: 5px;
+}
+
+.my_guifos:hover {
+    outline: 1px dotted var(--negro--);
+}
+
+.botones .tema {
+    position: relative;
+    width: 127px;
+    height: 36px;
+    border: 1px solid black;
+    outline: none;
+    background-color: var(--snuff--);
+    cursor: pointer;
+}
+
+.botones .tema :hover {
+    border-style: dotted;
+    padding: 5px 30px;
+    color: var(--negro--);
+}
+
+.tema .opc-tema a {
+    position: absolute;
+    width: 100%;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+
+.botones option a:hover {
+    border-style: dotted;
+    padding: 5px 30px;
+    color: var(--negro--);
+    border-width: 1px;
+}
+
+.sailorDay {
+    margin-bottom: 5px;
+    width: 150px;
+    height: 36px;
+    background-color: var(--white-smoke--);
+}
+
+.sailorNight {
+    width: 150px;
+    height: 36px;
+    background-color: var(--white-smoke--);
+}
+
+.sailorDay:hover,
+.sailorNight:hover {
+    background-color: var(--lavender-blush--);
+    border: 1px solid var(--lilac--);
+}
+
+.first-letter:hover {
+    text-decoration: underline;
+}
+
+
+.linea {
+    position: relative;
+    width: 100%;
+    color: var(--blanco--);
+    padding-left: 5px;
+    height: 24px;
+    background-image: linear-gradient(270deg, var(--snuff--) 0%, #4180F6 100%);
+}
+
+.top {
+    position: absolute;
+    top: -1px;
+    left: -91px;
+    width: 100vw;
+    color: var(--blanco--);
+}
+
+.inputs {
+    position: relative;
+    background: var(--whisper--);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: inset -2px -2px 0 0 var(--pinkSwan--), inset 2px 2px 0 0 var(--blanco--);
+}
+
+
+
+.inputs #valor {
+    position: relative;
+    margin: 15px 10px;
+    width: 72vw;
+    height: 40px;
+    outline: none;
+    background: var(--blanco--);
+    padding: 0 0 0 calc(12px);
+    box-shadow: inset -2px -2px 0 0 var(--whisper--), inset 1px 1px 0 0 var(--negro--);
+}
+
+#enviar {
+    width: 100px;
+    height: 36px;
+    cursor: pointer;
+}
+
+.normal {
+    background: var(--whisper--);
+    color: var(--pinkSwan--);
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 var(--pinkSwan--), inset 1px 1px 0 0 var(--blanco--);
+}
+
+.activa {
+    color: var(--negro--);
+    background: var(--snuff--);
+    border: 1px solid var(--blackCurrant--);
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 var(--blanco--);
+}
+
+
+.busqueda {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 95px;
+    color: var(--blanco--);
+    background: var(--whisper--);
+}
+
+.opc-busqueda {
+    position: relative;
+    width: 100%;
+    padding: 16px 0px;
+    display: flex;
+    flex-direction: column;
+    background: var(--whisper--);
+    box-shadow: inset -2px -2px 0 0 var(--pinkSwan--), inset -3px 2px 0 0 var(--blanco--);
+    height: auto;
+}
+
+
+.opc-busqueda input {
+    position: relative;
+    height: 34px;
+    margin: 4px 20px;
+    cursor: pointer;
+    outline: none;
+    text-align: start;
+    width: 72vw;
+    padding: 0px 0 0 calc(14px);
+    background: #F0F0F0;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 var(--pinkSwan--), inset 1px 1px 0 0 var(--blanco--);
+}
+
+
+.opc-busqueda input:hover {
+    outline: 1px dotted var(--negro--);
+    outline-offset: -5px;
+}
+
+.history {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.history button {
+    color: #ffffff;
+    width: 81px;
+    height: 34px;
+    margin: 5px 5px 0 0;
+    cursor: pointer;
+    background: #3A72DB;
+    border: 1px solid #4C2F99;
+    box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+}
+
+
+
+.container-image {
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.container-image input {
+    position: relative;
+    margin: 64px 0 16px 0;
+    padding-left: 10px;
+    width: 100%;
+    height: 32px;
+    outline: none;
+    background: #FFFAFE;
+    border: 1px solid var(--frenchLilac--);
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+}
+
+
+.lupa {
+    position: relative;
+    left: -5px;
+    margin: 5px 10px 0 0;
+}
+
+.filaSugerencias {
+    display: flex;
+    flex-direction: row;
+}
+
+.sugerencias input {
+    position: relative;
+    margin: 64px 0 16px 0;
+    padding-left: 10px;
+    width: 100%;
+    height: 32px;
+    outline: none;
+    background: #FFFAFE;
+    border: 1px solid var(--frenchLilac--);
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+}
+
+.sugerencias button {
+    position: absolute;
+    color: #ffffff;
+    width: 81px;
+    height: 34px;
+    cursor: pointer;
+    background: #3A72DB;
+    border: 1px solid #4C2F99;
+    box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+    bottom: 14px;
+    left: 6px;
+}
+
+
+
+.close {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    width: 20px !important;
+    cursor: pointer;
+}
+
+
+.cajas {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* height: 304px; */
+}
+
+
+.caja {
+    position: relative;
+    width: 288px;
+    height: 298px;
+    background-color: var(--pinkSwan--);
+    margin-right: 24px;
+    display: block!important;
+}
+
+.caja img {
+    width: 288px;
+    height: 298px;
+    display: block!important;
+}
+
+
+.caja_grande {
+    position: relative;
+    width: 600px;
+    height: 298px;
+    background-color: var(--pinkSwan--);
+    margin-right: 24px;
+}
+
+.caja_grande img {
+    width: 600px;
+    height: 298px;
+    display: block!important;
+}
+
+.caja:last-child {
+    margin-right: 0;
+}
+
+.caja span {
+    position: absolute;
+    width: 100%;
+}
+
+.tendencias input {
+    position: relative;
+    margin: 64px 0 16px 0;
+    padding-left: 10px;
+    width: 100%;
+    height: 32px;
+    outline: none;
+    background: #FFFAFE;
+    border: 1px solid var(--frenchLilac--);
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+}
+
+.fila_1 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 304px;
+}
+
+.fila_2 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 304px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+.fila_3 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 304px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.fila_3 .caja_grande {
+    margin-right: 0;
+}
+
+
+.lineaTrending{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    color: var(--blanco--);
+    padding-left: 5px;
+    height: 24px;
+    background-image: linear-gradient(270deg, var(--snuff--) 0%, #4180F6 100%)
+}
+
+
+/*-----------------------------------*/
+/*Estilos Crea tu Guifo*/
+/*-----------------------------------*/
+
+.arrow {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 60px;
+    left: -40px;
+
+}
+
+.container-guifos {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ventana {
+    position: relative;
+    width: 684px;
+    height: 386px;
+    background-color: #E6E6E6;
+}
+
+.linea-ventana {
+    position: absolute;
+    width: 684px;
+    margin-bottom: 30px
+}
+
+.img-ventana {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    top: 57px;
+    margin: 0 20px;
+}
+
+.instrucciones {
+    position: absolute;
+    width: 518px;
+    height: 200px;
+    top: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    line-height: 20px;
+    margin: 30px 70px;
+    height: 190px;
+    font-family: ChakraPetch-Regular;
+    font-size: 14px;
+    color: #110038;
+}
+
+.lista-ventana {
+    margin: 5px 0;
+}
+
+.lista-ventana li {
+    margin-bottom: 5px;
+}
+
+
+.btn-ventana {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 20px;
+}
+
+.btn-ventana button {
+    width: 144px;
+    height: 36px;
+    cursor: pointer;
+}
+
+.btn-ventana .cancelar {
+    background-color: #FFF4FD;
+}
+
+.btn-ventana .comenzar {
+    margin-left: 16px;
+    background-color: #F7C9F3;
+}
+
+.misGuifos input {
+    position: relative;
+    margin: 64px 0 16px 0;
+    padding-left: 10px;
+    width: 100%;
+    height: 32px;
+    outline: none;
+    background: #FFFAFE;
+    border: 1px solid #E6BBE2;
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+}
+
+
+.ventanaCaptura {
+    position: relative;
+    width: 860px;
+    height: 548px;
+    background-color: #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.ventanaCaptura .linea {
+    position: absolute;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.ventanaCaptura .cajaCaptura {
+    position: relative;
+    width: 838px;
+    height: 440px;
+    background-color: #997D97;
+    margin: 30px 0;
+}
+
+.btnMas {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contador {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 124px;
+    height: 36px;
+    margin-left: 13px;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+}
+
+.ventanaCaptura .btnCaptura {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    right: 13px;
+}
+
+.ventanaCaptura .btnStop {
+    position: absolute;
+    display: none;
+    flex-direction: row;
+    right: 13px;
+}
+
+.btnCaptura span {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #f7c9f3;
+    border: 1px solid #110038;
+    border-right: none;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.btnCaptura button {
+    width: 144px;
+    height: 36px;
+    background-color: #f7c9f3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.btnStop span {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #FF6161;
+    border: 1px solid #110038;
+    border-right: none;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.btnStop button {
+    width: 144px;
+    height: 36px;
+    background-color: #FF6161;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.video {
+    position: relative;
+    width: 838px;
+    height: 440px;
+    object-fit: fill;
+}
+
+
+.image {
+    position: relative;
+    width: 838px;
+    height: 440px;
+    object-fit: fill;
+}
+
+
+.exito {
+    position: relative;
+    width: 721px;
+    height: 391px;
+    background-color: #e6e6e6;    
+    display: none;
+    flex-direction: column;
+}
+
+.exito a{
+    color: #000000;
+}
+
+.contenedor-exito {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 27px;
+    
+}
+
+.img-exito {
+    position: relative;
+    margin-left: 27px;
+    width: 50%;
+    /* background-color: black; */
+}
+
+.img-exito img {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.btn-exito {
+    position: relative;
+    display: flex;
+    width: 50%;
+    color:#000000;
+    height: 191px;
+    font-size: 14px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.btn-exito #copyLink {
+    width: 256px;
+    height: 36px;
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    margin-top: 14px;
+    cursor: pointer;
+}
+
+.btn-exito #downloadLink{
+    width: 256px;
+    height: 36px;
+    padding: 7px 0;
+    text-align: center;
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    margin-top: 14px;
+} 
+
+
+
+.exito-listo{
+    position: absolute;
+    text-align: center;
+    padding: 7px 0;
+    width: 144px;
+    height: 36px;
+    right: 46px;
+    bottom: 44px;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+
+}
+
+#mensaje{
+    position: relative; 
+    left: -80px; 
+    font-weight: 600; 
+    top: 10px; 
+    display: none;
+}
+
+
+
+/*-----------------------------------*/
+/*Fin de Estilos Crea tu Guifo*/
+/*-----------------------------------*/
+
+
+/*-----------------------------------*/
+/*Galeria Mis Guifos*/
+/*-----------------------------------*/
+
+
+.cajaGaleria input{
+    position: relative;
+    margin: 64px 0 16px 0;
+    padding-left: 10px;
+    width: 100%;
+    height: 32px;
+    outline: none;
+    background: #FFFAFE;
+    border: 1px solid var(--frenchLilac--);
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+}
