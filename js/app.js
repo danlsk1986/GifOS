@@ -52,8 +52,54 @@ valorBusqueda.addEventListener('keyup', normalToActive);
 
 valorBusqueda.addEventListener('keyup', keyCodeEnter);
 
+valorBusqueda.addEventListener('keyup', keyUpCampo);
 
 
+
+
+
+function keyUpCampo() {   
+  
+  if(valorBusqueda.value == ""){
+    opcBusqueda.style = "display: none;";
+  }else{
+  
+  //Muestra el menu de sugerencias
+  opcBusqueda.style = "display: flex; flex-direction:column;";  
+
+  sendToPage();
+  
+  }
+}
+
+
+var sendToPage = function () {
+  //Get the input value by finding the element by its ID
+  let busqueda = document.getElementById('valor').value;
+
+
+  //Check if the value is in the array
+  var sugerencias = ['marvel','maravilloso', 'futbol','goku_ssj','falafel','robocop', 'rick','ricardo', 'morty', 'x-men', 'starwars', 'goku', 'bulma', 'vegeta', 'simpsons', 'homer', 'cartoon'];
+  var coincidencias =[];
+ 
+  for (x in sugerencias) {
+
+    let lSug = sugerencias[x].charAt();
+
+    if (lSug.includes(busqueda.charAt())) {
+        
+       coincidencias.push(sugerencias[x]);
+       coincidencias.sort();
+
+        opcBusqueda.innerHTML =  `<input type="button" value=${coincidencias[0]} >
+                                  <input type="button" value=${coincidencias[1]} >
+                                  <input type="button" value=${coincidencias[2]} >                           
+      ` 
+    }  
+  }
+   
+
+}
 
 
 //Realiza la carga de la funciones que se necesitan al iniciar
@@ -556,52 +602,5 @@ function tendenciasLinea(){
 /*Prueba*/
 /*-----------------------------------*/
 
-let palabra =[];  
-
-valorBusqueda.addEventListener('keydown', function(e){
-
- 
- let key = e.key;
- palabra.push(key)
- let word = palabra.join("");
-
- 
- 
- for(let i=0; i< localStorage.length; i++){
-    let valores = localStorage.getItem(i);
-    if(valores == word){
-        console.log("son Iguales");
-       
-          
-      }
-     
- }
 
 
-
-
-  
-
- 
-  
-})
-
-// function searchCampo(palabra){
-//   console.log("Search Campo");
-  
-
-//   for(let i =0; i< localStorage.length; i++){
-//     let valores = localStorage.getItem(i);
-
-//     console.log(typeof valores);
-    
-        
-//     // if(valores.includes(palabra)){
-//     //   alert("son Iguales");
-//     //   console.log(palabra);
-      
-//     // }
-//   }
-
-
-// }
