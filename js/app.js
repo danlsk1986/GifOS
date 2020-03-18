@@ -250,6 +250,7 @@ function verBtnHistorial() {
         searchFetch(this.innerText);
       } else {
         listaSearch.splice(0, listaSearch.length);
+        titulosBusqueda.splice(0, titulosBusqueda.length);
         searchFetch(this.innerText);
       }
 
