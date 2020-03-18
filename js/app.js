@@ -68,7 +68,7 @@ function keyUpCampo() {
   opcBusqueda.style = "display: flex; flex-direction:column;";  
 
   sendToPage();
-  
+
   }
 }
 
@@ -128,7 +128,8 @@ function eventosBusqueda(){
 
     enviar.classList.add('normal');
     enviar.classList.remove('activa');
-    enviar.setAttribute('disabled', 'disabled');  
+    enviar.setAttribute('disabled', 'disabled');
+    opcBusqueda.style = "display: none;";  
     listaSearch.splice(0, listaSearch.length);
   }
 }
