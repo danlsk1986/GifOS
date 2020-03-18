@@ -132,6 +132,7 @@ function eventosBusqueda(){
     enviar.setAttribute('disabled', 'disabled');
     opcBusqueda.style = "display: none;";  
     listaSearch.splice(0, listaSearch.length);
+    titulosBusqueda.splice(0, titulosBusqueda.length);
   }
 }
 
@@ -220,6 +221,8 @@ function keyCodeEnter(e){
     enviar.classList.remove('activa');
     enviar.setAttribute('disabled', 'disabled');  
     listaSearch.splice(0, listaSearch.length);
+    titulosBusqueda.splice(0, titulosBusqueda.length);
+    
   }
   
 }
