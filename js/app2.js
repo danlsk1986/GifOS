@@ -156,8 +156,6 @@
     };
 
     
-
-
    
 
 
@@ -169,8 +167,6 @@
         getStreamAndRecord();
     }   
     
-
-
 
 
     function mostrarGifOS(key) {
