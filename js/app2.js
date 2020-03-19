@@ -177,7 +177,7 @@
 
         if (sessionStorage.length == 0) {
       
-          contador += 1;
+          let contador = 1;
           sessionStorage.setItem(contador, key);
           idGif.push(sessionStorage.getItem(contador));
           crearCajaGifOS(key);
