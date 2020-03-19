@@ -92,9 +92,9 @@ var sendToPage = function () {
        coincidencias.push(sugerencias[x]);
        coincidencias.sort();
 
-        opcBusqueda.innerHTML =  `<input type="button" value=${coincidencias[0]}>
-                                  <input type="button" value=${coincidencias[1]}>
-                                  <input type="button" value=${coincidencias[2]}>                           
+        opcBusqueda.innerHTML =  `<input type="button" value=${coincidencias[0]} onclick="searchFetch('${coincidencias[0]}')">
+                                  <input type="button" value=${coincidencias[1]} onclick="searchFetch('${coincidencias[1]}')">
+                                  <input type="button" value=${coincidencias[2]} onclick="searchFetch('${coincidencias[2]}')">                           
       ` 
     }  
   }
@@ -294,7 +294,6 @@ function searchFetch(url) {
         let titulos = json.data[j].title;
        
         titulosBusqueda.push(titulos);
-        console.log(titulosBusqueda);
         listaSearch.push(resultado);
 
       }
@@ -363,6 +362,12 @@ function searchFetch(url) {
             <span class="lineaTrending" style="display:none">#${titulosBusqueda[11]}</span>
             </div>       
           </div> `;
+
+          
+          limpiarCampo();
+          opcBusqueda.style = "display: none;";
+          listaSearch.splice(0, listaSearch.length);
+          titulosBusqueda.splice(0, titulosBusqueda.length);
 
           busquedaLinea();
       }
