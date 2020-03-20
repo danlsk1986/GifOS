@@ -265,7 +265,7 @@ header {
 .opc-busqueda {
     position: relative;
     width: 100%;
-    padding: 16px 0px;
+ 
     display: flex;
     flex-direction: column;
     background: var(--whisper--);

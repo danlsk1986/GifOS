@@ -74,31 +74,30 @@ function keyUpCampo() {
 }
 
 
+const sugerencias = ['marvel','maravilloso', 'futbol','goku_ssj','falafel','robocop', 'rick','ricardo', 'morty', 'x-men', 'starwars', 'goku', 'bulma', 'vegeta', 'simpsons', 'homer', 'cartoon'];
+
+const searchInput = document.querySelector('#valor');
+const suggestionsPanel = document.querySelector('.opc-busqueda');
+
 var sendToPage = function () {
-  //Get the input value by finding the element by its ID
-  let busqueda = document.getElementById('valor').value;
+  
+  const input = searchInput.value;
+  suggestionsPanel.innerHTML = "";
+  const suggestions = sugerencias.filter(function(data){
+      return data.toLowerCase().startsWith(input);
+  })
 
+ suggestions.forEach(function(suggested){
+     const input = document.createElement('INPUT');
+           input.setAttribute('type','button');
+           input.setAttribute('value',suggested);
+           input.setAttribute('onclick',`searchFetch("${suggested}")`);      
+          suggestionsPanel.appendChild(input);
+ });
 
-  //Check if the value is in the array
-  var sugerencias = ['marvel','maravilloso', 'futbol','goku_ssj','falafel','robocop', 'rick','ricardo', 'morty', 'x-men', 'starwars', 'goku', 'bulma', 'vegeta', 'simpsons', 'homer', 'cartoon'];
-  var coincidencias =[];
- 
-  for (x in sugerencias) {
-
-    let lSug = sugerencias[x].charAt();
-
-    if (lSug.includes(busqueda.charAt())) {
-        
-       coincidencias.push(sugerencias[x]);
-       coincidencias.sort();
-
-        opcBusqueda.innerHTML =  `<input type="button" value=${coincidencias[0]} onclick="searchFetch('${coincidencias[0]}')">
-                                  <input type="button" value=${coincidencias[1]} onclick="searchFetch('${coincidencias[1]}')">
-                                  <input type="button" value=${coincidencias[2]} onclick="searchFetch('${coincidencias[2]}')">                           
-      ` 
-    }  
-  }
-   
+ if( input === ''){
+     suggestionsPanel.innerHTML = "";
+ }
 
 }
 
