@@ -157,33 +157,67 @@ function limpiarCampo(){
 function mostrar() {
 
   let largo = localStorage.length;
-  for (var i = 1; i <= largo; i++) {
-    crearBtnHistorial(localStorage[i])
+  localStorage.setItem("history", JSON.stringify(guardarHistorial));
+  let miHistory = JSON.parse(localStorage.getItem("history"));
+  for (var i = 0; i <= largo; i++) {
+    crearBtnHistorial(miHistory[i]);
   }
 
 }
+
+
 
 
 
 //Similar al anterior solo que este se realiza en base a la busqueda actual y no al historial
+// function mostrarLocalStorage(busqueda) {
+
+//   if (localStorage.length == 0) {
+
+//     contador += 1;
+//     localStorage.setItem(contador, busqueda);
+//     guardarHistorial.push(localStorage.getItem(contador));
+//     crearBtnHistorial(busqueda);
+
+//   } else {
+//     contador = localStorage.length
+//     contador += 1;
+//     localStorage.setItem(contador, busqueda);
+//     guardarHistorial.push(localStorage.getItem(contador));
+//     crearBtnHistorial(busqueda);
+//   }
+
+// }
+
+
+
 function mostrarLocalStorage(busqueda) {
+  // if (localStorage.length == 0) {
 
-  if (localStorage.length == 0) {
-
-    contador += 1;
-    localStorage.setItem(contador, busqueda);
-    guardarHistorial.push(localStorage.getItem(contador));
-    crearBtnHistorial(busqueda);
-
-  } else {
-    contador = localStorage.length
-    contador += 1;
-    localStorage.setItem(contador, busqueda);
-    guardarHistorial.push(localStorage.getItem(contador));
-    crearBtnHistorial(busqueda);
-  }
+        // contador += 1;
+        guardarHistorial.push(busqueda);
+        localStorage.setItem("history", JSON.stringify(guardarHistorial));
+        let miHistory = JSON.parse(localStorage.getItem("history"));
+        console.log(localStorage.length)
+        
+    
+      // } else {
+      //   contador = localStorage.length
+      //   contador += 1;
+      //   localStorage.setItem(contador, busqueda);
+      //   guardarHistorial.push(localStorage.getItem(contador));
+      //   crearBtnHistorial(busqueda);
+      // }
 
 }
+
+
+
+
+
+
+
+
 
 
 
